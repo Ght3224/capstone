@@ -1,8 +1,0 @@
-
-  {
-    item: @product.item,
-    price: @product.price, 
-    comment: @product.comment, 
-    similiarProducts: @product.  similiarlyPricedProducts
-
-}

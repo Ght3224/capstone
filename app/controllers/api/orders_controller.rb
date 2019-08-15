@@ -6,6 +6,11 @@ class Api::OrdersController < ApplicationController
     render 'index.json.jb'
   end 
 
+  def show 
+    @order = Order.find(params[:id])
+    render 'show.json.jb'
+  end
+
   def create 
 
 
@@ -31,8 +36,8 @@ class Api::OrdersController < ApplicationController
 
     @order = Order.new(
          price: total, 
-         user_id: current_user.id,
-         quantity: quantities
+         user_id: current_user.id
+         # quantity: quantities
       )
 
      @order.save!

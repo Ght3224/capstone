@@ -1,9 +1,0 @@
-
- {  
-
-  price: @order.price.to_i,
-  message: "Your order has been received", 
-  ReceiptNo: @order.user_id.to_i + rand(3000) + rand(100000), 
-  OrderInformation: @order.carted_products
-    # total: 
-  }

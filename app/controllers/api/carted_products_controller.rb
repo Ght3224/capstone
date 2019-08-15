@@ -47,5 +47,6 @@ class Api::CartedProductsController < ApplicationController
     @carted_product.status = 'removed'
     @carted_product.save 
     render json: {message: 'you have removed item from the cart'}
+    @carted_product.destroy
  end 
 end

@@ -1,7 +1,0 @@
-@order.each do |order| 
-  {
-    id: order.id, 
-    price: order.price
-    
-  }
-end 
