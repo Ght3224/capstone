@@ -1,5 +1,7 @@
 {
   "name": "Grocery",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "vue2-filters": "^0.7.0"
+  }
 }
