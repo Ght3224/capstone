@@ -32,6 +32,7 @@ class Api::CartedProductsController < ApplicationController
     @carted_product = CartedProduct.find_by(id: params[:id])
     if @carted_product.update(
       # order: params[:order_id], 
+      quantity: params[:quantity],
       comment: params[:comment]
     )
       @carted_product.save
@@ -44,9 +45,9 @@ class Api::CartedProductsController < ApplicationController
 
  def destroy 
     @carted_product = CartedProduct.find_by(id: params[:id])
-    @carted_product.status = 'removed'
-    @carted_product.save 
+    # @carted_product.status = 'removed'
+    # @carted_product.save 
     render json: {message: 'you have removed item from the cart'}
-    @carted_product.destroy
+    @carted_product.destroy!
  end 
 end

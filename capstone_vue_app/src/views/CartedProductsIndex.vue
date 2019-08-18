@@ -68,8 +68,9 @@ export default {
     methods: {
         destroyProduct: function(product) {
             axios.delete('api/carted_products/' + product.id).then(response => { console.log(response.data); })
-            var index = this.products.indexOf(product)
-            this.products.splice(index, 1);
+            var index = this.cartedProducts.indexOf(product)
+            this.cartedProducts.splice(index, 1);
+            this.$router.push(`/carted_products`)
         },
         makeOrder: function() {
             axios.post('/api/orders').then(response => {

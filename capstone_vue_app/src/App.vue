@@ -1,14 +1,17 @@
 <template>
     <div id="app">
         <div id="nav">
+            <header id="header"></header>
             <router-link to="/">Home</router-link> |
             <router-link to="/carted_products">Shopping Cart</router-link>
         </div>
         <router-view />
+        <footer id="footer">
+        </footer>
     </div>
 </template>
 <style>
-#app {
+/*#app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -27,5 +30,5 @@
 
 #nav a.router-link-exact-active {
     color: #42b983;
-}
+}*/
 </style>
