@@ -1,10 +1,14 @@
 <template>
     <div class="home">
-        <h2>item: {{ product.item }}</h2>
-        <!-- <h3> Imnage: {{product.image}} </h3>-->
-        <h1>Price: {{ product.price }}</h1>
-        <h2> Ordered Date: {{ Date(product.created_at) }} </h2>
-        <router-link to="/">Back To Beginning</router-link>
+        <div id="demo">
+            <!--   <transition-group class="row" appear enter-active-class="tada" leave-active-class="tada"> -->
+            <h2>item: {{ product.item }}</h2>
+            <!-- <h3> Imnage: {{product.image}} </h3>-->
+            <h1>Price: {{ product.price }}</h1>
+            <h2> Ordered Date: {{ (new Date('2019-09-02')).toLocaleString()}} </h2>
+            <router-link to="/">Back To Beginning</router-link>
+            <!-- </transition-group> -->
+        </div>
     </div>
 </template>
 <style>
@@ -25,6 +29,11 @@ export default {
             this.product = response.data;
         })
     },
-    methods: {}
+    methods: {
+        revertDate(string) {
+
+            string.setDate(1);
+        }
+    }
 };
 </script>

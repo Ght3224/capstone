@@ -10,7 +10,6 @@
 // @ is an alias to /src
 import axios from "axios"
 import Vue2Filters from "vue2-filters";
-
 import Product from '../components/Product.vue';
 
 

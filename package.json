@@ -2,6 +2,7 @@
   "name": "Grocery",
   "private": true,
   "dependencies": {
+    "vue-confirmation-button": "^1.0.1",
     "vue2-filters": "^0.7.0"
   }
 }
