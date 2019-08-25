@@ -2,9 +2,7 @@
     <div>
         <div id="app">
             <div id="nav">
-                <router-link to="/orders"> Orders</router-link>
-            </div>
-            <router-view />
+<!-- <router-link to="/orders"> Orders</router-link> --> </div> <router-view />
         </div>
         <div class="carted_products">
             <h1>{{ message }}</h1>
@@ -15,13 +13,16 @@
                 <button v-on:click="makeOrder()">Order!</button>
                 </button></h4>
             <h5></h5>
+            <!-- <div v-for="product in Products">
+               <!- <div v-if="currentProduct === product"> -->
+            <!-- <h6> Item: {{product.item}} </h6> -->
+            <!-- </div> -->
+            <!--  </div> -->
             <div v-for="product in cartedProducts">
+                <h2> ProductId: {{product.product_id}} </h2>
                 <h3> Quantity: {{product.quantity}} </h3>
                 <h2> {{product.price}} </h2>
                 <p> Shelf Date: {{Date(product.updated_at)}} </p>
-                <div v-if="currentProduct === product">
-                    <h3> Item: {{product.item}} </h3>
-                </div>
                 <button v-on:click="destroyProduct(product)">Delete Item </button>
                 <hr>
             </div>
@@ -60,10 +61,14 @@ export default {
             message: "This is the cart",
             cartedProducts: [],
             currentProduct: {},
+            Products: []
         };
     },
     created: function() {
         axios.get("/api/carted_products").then(response => { this.cartedProducts = response.data; });
+        axios.get("/api/products").then(response => { this.Products = response.data; });
+
+
     },
     methods: {
         destroyProduct: function(product) {

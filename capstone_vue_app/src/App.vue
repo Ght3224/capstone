@@ -1,11 +1,16 @@
 <template>
-    <div id="app">
-        <div id="nav">
-            <header id="header"></header>
-            <router-link to="/">Home</router-link> |
-            <router-link to="/carted_products">Shopping Cart</router-link>
+    <div>
+        <div id="nav" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal">QuickServe Fruits</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <router-link class="p-2 text-dark" to="/">Home</router-link>
+                <router-link class="p-2 text-dark" to="/carted_products">Shopping Cart</router-link>
+                <a href="#"></a>
+            </nav>
         </div>
-        <router-view />
+        <div id="app" class="container">
+            <router-view />
+        </div>
         <footer id="footer">
         </footer>
     </div>

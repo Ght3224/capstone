@@ -2,7 +2,7 @@
     <div class="col-3">
         <h2>{{product.item}}</h2>
         <h3 v-if="inCart"> Quantity: {{product.quantity}} </h3>
-        <h3> {{product.price}} </h3>
+        <h3> ${{product.price}} </h3>
         <p> Shelf Date: {{Date(product.updated_at)}} </p>
         <div>
             <span>
@@ -13,7 +13,7 @@
             <button v-if="inCart" v-on:click="updateQty">Add To Cart</button>
             <button v-if="inCart" v-on:click="destroyProduct">Delete Item </button>
         </div>
-        <router-link v-bind:to="`/products/${product.id}`">See show info</router-link>
+        <router-link v-bind:to="`/products/${product.id}`"><strong>{{product.item}} Information</strong></router-link>
         <hr>
     </div>
 </template>
