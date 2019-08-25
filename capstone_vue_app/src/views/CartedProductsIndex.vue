@@ -2,7 +2,7 @@
     <div>
         <div id="app">
             <div id="nav">
-<!-- <router-link to="/orders"> Orders</router-link> --> </div> <router-view />
+<!-- <router-link to="/orders"> Orders</router-link> --> </div> <!-- <router-view /> -->
         </div>
         <div class="carted_products">
             <h1>{{ message }}</h1>

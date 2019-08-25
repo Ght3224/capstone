@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <h1> Produce-for-Sale! </h1>
+        <h1><strong> Produce-for-Sale! </strong></h1>
         <transition-group class="row" appear enter-active-class="animated heartBeat" leave-active-class="animated fadeOut">
             <product v-for="product in products" v-bind:product="product" v-bind:key="product.id"> </product>
         </transition-group>
