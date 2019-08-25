@@ -2,7 +2,7 @@
     <div class="col-3">
         <h2>{{product.item}}</h2>
         <h3 v-if="inCart"> Quantity: {{product.quantity}} </h3>
-        <h3> ${{product.price}} </h3>
+        <h3> $ {{product.price}} </h3>
         <p> Shelf Date: {{Date(product.updated_at)}} </p>
         <div>
             <span>
