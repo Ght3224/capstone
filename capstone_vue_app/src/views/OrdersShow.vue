@@ -7,7 +7,7 @@
                 <!-- <h3> Item: {{product.item}} </h3> -->
                 <h6> {{message}} </h6>
                 <h3> {{receiptNo}} </h3>
-                <!-- <h6> {{orderProducts}} </h6> -->
+               <!-- <h6> {{orderProducts}} </h6> -->
                 <!-- <p> Shelf Date: {{Date(product.updated_at)}} </p> -->
             </div>
         </transition-group>
