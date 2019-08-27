@@ -4,5 +4,9 @@
   "dependencies": {
     "vue-confirmation-button": "^1.0.1",
     "vue2-filters": "^0.7.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.2",
+    "webpack-dev-server": "^3.8.0"
   }
 }
