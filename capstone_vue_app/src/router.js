@@ -45,8 +45,7 @@ export default new Router({
             name: 'orders-show',
             component: OrdersShow
         },
-        { path: "/login", name: "login", component: Login },
-        { path: "/logout", name: "logout", component: Logout }, {
+        {
             path: '/about',
             name: 'about',
             // route level code-splitting
