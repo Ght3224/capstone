@@ -5,6 +5,8 @@
             <nav class="my-2 my-md-0 mr-md-3">
                 <router-link class="p-2 text-dark" to="/">Home</router-link>
                 <router-link class="p-2 text-dark" to="/carted_products">Shopping Cart</router-link>
+                <router-link to="/login">Login</router-link>
+                <router-link to="/logout">Logout</router-link>
                 <a href="#"></a>
             </nav>
         </div>
