@@ -1,0 +1,41 @@
+
+-----------------------------------------------------------------
+  pg_upgrade run on Tue Aug 27 00:24:58 2019
+-----------------------------------------------------------------
+
+You must identify the directory where the old cluster binaries reside.
+Please use the -b command-line option or the PGBINOLD environment variable.
+Running in verbose mode
+
+-----------------------------------------------------------------
+  pg_upgrade run on Tue Aug 27 00:25:12 2019
+-----------------------------------------------------------------
+
+check for "/usr/local/Cellar/postgresql/9.6.5/bin" failed: No such file or directory
+
+Running in verbose mode
+
+-----------------------------------------------------------------
+  pg_upgrade run on Tue Aug 27 00:25:22 2019
+-----------------------------------------------------------------
+
+You must identify the directory where the new cluster binaries reside.
+Please use the -B command-line option or the PGBINNEW environment variable.
+Running in verbose mode
+Running in verbose mode
+Running in verbose mode
+
+-----------------------------------------------------------------
+  pg_upgrade run on Tue Aug 27 00:26:00 2019
+-----------------------------------------------------------------
+
+You must identify the directory where the new cluster binaries reside.
+Please use the -B command-line option or the PGBINNEW environment variable.
+Running in verbose mode
+
+-----------------------------------------------------------------
+  pg_upgrade run on Tue Aug 27 00:26:04 2019
+-----------------------------------------------------------------
+
+check for "/usr/local/Cellar/postgresql/10.1/bin" failed: No such file or directory
+
