@@ -11,8 +11,10 @@
                 <hr>
                 <br>
                 <br>
-                <button v-on:click="makeOrder()">Order!</button>
-                </button></h4>
+                <h1><button v-on:click="makeOrder()">Order!</button>
+                    </button></h1>
+            </h4>
+            <br><br><br><br>
             <h5></h5>
             <!-- <div v-for="product in Products">
                <!- <div v-if="currentProduct === product"> -->

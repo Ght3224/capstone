@@ -3,9 +3,7 @@ class Api::CartedProductsController < ApplicationController
 
   def index 
      # @carted_products = CartedProduct.all
-    if current_user
-      @carted_products = current_user.carted_products.where(status: 'carted')
-    end 
+    @carted_products = CartedProduct.where(status: 'carted') 
     render 'index.json.jb'
   end 
 
@@ -20,7 +18,6 @@ class Api::CartedProductsController < ApplicationController
     status: 'carted',
 #friedman
     user_id: User.find_by(name: "Adam"), 
-=======
     # user_id: User.find_by_email('ad@ao.com').id, 
 #master
     product_id: params[:product_id], 
