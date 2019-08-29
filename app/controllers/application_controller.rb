@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def current_user
-    return User.find_by_email('ka@ao.com')
+    return User.find_by_email('ad@ao.com')
     # auth_headers = request.headers['Authorization']
     # if auth_headers.present? && auth_headers[/(?<=\A(Bearer ))\S+\z/]
     #   token = auth_headers[/(?<=\A(Bearer ))\S+\z/]

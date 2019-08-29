@@ -1,8 +1,8 @@
 @products.each do |product|
   {
     price: product.price, 
-    comment: product.comment, 
-    similiarProducts: product.similiarlyPricedProducts
+    # comment: product.comment, 
+    # similiarProducts: product.similiarlyPricedProducts
 
   }
 end 

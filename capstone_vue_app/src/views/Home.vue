@@ -18,7 +18,8 @@ export default {
     data: function() {
         return {
             products: [],
-            currentProduct: {}
+            currentProduct: {},
+            user: {}
         };
     },
     components: {
@@ -28,7 +29,11 @@ export default {
 
         axios.get("/api/products").then(response => {
             this.products = response.data;
-        });
+        })
+        axios.get("/api/users").then(response => {
+            //             // console.log(response.data);
+            this.user = response.data;
+        })
     },
     methods: {
         showProduct: function(product) {

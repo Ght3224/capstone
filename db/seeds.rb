@@ -7,6 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+ farms = ['Altamont Orchards (Albany, NY)', 'Prospect Hill Orchards (Ulster NY)', 'Samascott Orchards (Columbia, NY)', 'Kelder’s Farm (Ulster NY)', 'Sand Flat Orchard (Montgomery, NY)', 'Buhrmaster Family Farms (Schenectady NY)']
+ boolean = [true, false]
+
 100.times do 
-  Product.create({item: Faker::Food.fruits, price: rand(10)})
+  Product.create({item: Faker::Food.fruits, price: rand(2..10), farm: farms[rand(5)], organic: boolean[rand(2)]})
 end 
+
+
+
+ # Product.all.map do |farm|
+ # 	farm.farm = farms[rand(5)]
+ # 	farm.organic = boolean[rand(1)]
+ # end 

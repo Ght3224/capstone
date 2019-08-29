@@ -1,12 +1,13 @@
 <template>
     <div>
         <div id="nav" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-            <h5 class="my-0 mr-md-auto font-weight-normal">QuickServe Fruits</h5>
+            <h5 class="my-0 mr-md-auto font-weight-normal"> QuickServe Fruits</h5>
             <nav class="my-2 my-md-0 mr-md-3">
                 <router-link class="p-2 text-dark" to="/">Home</router-link>
                 <router-link class="p-2 text-dark" to="/carted_products">Shopping Cart</router-link>
-                <router-link to="/login">Login</router-link>
-                <router-link to="/logout">Logout</router-link>
+          <!-- <router-link to="/signup"> Signup</router-link>
+<router-link to="/login"> Login</router-link>
+<router-link to="/logout"> Logout</router-link> -->
                 <a href="#"></a>
             </nav>
         </div>
@@ -42,3 +43,27 @@ body {
     background-color: #21FE90;
 }
 </style>
+// <script>
+// import axios from "axios"
+// export default {
+//     data: function() {
+//         return {
+//             user: {}
+//         };
+//     },
+//     created: function() {
+//         // console.log(this.$route.params.id);
+//         axios.get("/api/user/").then(response => {
+//             // console.log(response.data);
+//             this.user = response.data;
+//         })
+//     },
+//     methods: {
+//         revertDate(string) {
+
+//             string.setDate(1);
+//         }
+//     }
+// };
+//
+</script>

@@ -6,9 +6,9 @@ import ProductsShow from './views/ProductsShow.vue'
 import CartedProductsIndex from './views/CartedProductsIndex.vue'
 import OrdersIndex from './views/OrdersIndex.vue'
 import OrdersShow from './views/OrdersShow.vue'
-import Login from '/.views/Login.vue'
-import Logout from '/.views/Logout.vue'
-
+// import Login from './views/Login.vue';
+// import Signup from "./views/Signup.vue";
+// import Logout from './views/Logout.vue';
 
 Vue.use(Router)
 
@@ -45,6 +45,9 @@ export default new Router({
             name: 'orders-show',
             component: OrdersShow
         },
+        // { path: "/signup", name: "signup", component: Signup },
+        // { path: "/login", name: "login", component: Login },
+        // { path: "/logout", name: "logout", component: Logout }, 
         {
             path: '/about',
             name: 'about',

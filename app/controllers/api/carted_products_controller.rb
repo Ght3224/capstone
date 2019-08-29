@@ -3,9 +3,9 @@ class Api::CartedProductsController < ApplicationController
 
   def index 
      # @carted_products = CartedProduct.all
-    if current_user
-      @carted_products = current_user.carted_products.where(status: 'carted')
-    end 
+    # if current_user
+      @carted_products = CartedProduct.where(status: 'carted')
+    # end 
     render 'index.json.jb'
   end 
 
