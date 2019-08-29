@@ -14,8 +14,8 @@
                 <h1><button v-on:click="makeOrder()">Order!</button>
                     </button></h1>
             </h4>
-            <br><br><br><br>
             <h5></h5>
+            <br><br><br>
             <!-- <div v-for="product in Products">
                <!- <div v-if="currentProduct === product"> -->
             <!-- <h6> Item: {{product.item}} </h6> -->
