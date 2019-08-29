@@ -3,7 +3,7 @@
 {
 
 	item: carted_product.product.item,
-	product_id: carted_product.id,
+	# product_id: carted_product.id,
 	# price: carted_product.price, 
 	status: carted_product.status
 
