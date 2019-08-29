@@ -2,7 +2,7 @@
   {
     item: @product.item,
     price: @product.price, 
-    comment: @product.comment, 
+    # comment: @product.comment, 
     farm: @product.farm, 
     organic: @product.organic
 

@@ -1,5 +1,7 @@
 @users.each do |user| 
-	{
+
+	{  
+	 	name: user.name, 
 		email: user.email
 	}
 end 

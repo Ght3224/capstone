@@ -14,7 +14,7 @@ class Api::OrdersController < ApplicationController
   def create 
 
 
-    @carted_products = current_user.carted_products.where(status: 'carted')
+    @carted_products = CartedProduct.where(status: 'carted')
     # subtotal = 0 
     # tax = 0
     # total = 0 
@@ -35,12 +35,12 @@ class Api::OrdersController < ApplicationController
 
 
     @order = Order.new(
-         price: total, 
-         user_id: current_user.id
+         price: total 
+         # user_id: current_user.id
          # quantity: quantities
       )
 
-     @order.save!
+     @order.save
 
 
     @carted_products.update(status: 'purchased', order_id: @order.id)

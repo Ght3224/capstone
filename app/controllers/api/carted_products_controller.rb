@@ -18,12 +18,16 @@ class Api::CartedProductsController < ApplicationController
   def create 
     @carted_product = CartedProduct.new(
     status: 'carted',
+#friedman
+    user_id: User.find_by(name: "Adam"), 
+=======
     # user_id: User.find_by_email('ad@ao.com').id, 
+#master
     product_id: params[:product_id], 
     quantity: params[:quantity], 
     order_id: params[:order_id]
     )
-    @carted_product.save  
+    @carted_product.save!
     render 'show.json.jb'
   end 
 

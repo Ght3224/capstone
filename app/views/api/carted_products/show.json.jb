@@ -1,1 +1,3 @@
-{message: @carted_product}
+{
+	status: @carted_product.status
+}
