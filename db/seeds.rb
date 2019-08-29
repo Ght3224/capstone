@@ -15,6 +15,8 @@
 end 
 
 
+User.create({name: "Adam", email: "ad@ao.com"})
+
 
  # Product.all.map do |farm|
  # 	farm.farm = farms[rand(5)]
