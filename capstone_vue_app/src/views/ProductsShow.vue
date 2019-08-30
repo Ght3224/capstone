@@ -4,7 +4,7 @@
             <!--   <transition-group class="row" appear enter-active-class="tada" leave-active-class="tada"> -->
             <h2>item: {{ product.item }}</h2>
             <!-- <h3> Imnage: {{product.image}} </h3>-->
-            <h1>Price: {{ product.price }}</h1>
+            <h1> Price: {{ product.price }}</h1>
             <h2> Date when store ordered this item: {{ (new Date('2019-09-02')).toLocaleString()}} </h2>
             <h3> Organic: {{product.organic}} </h3>
             <h2> Producing Farm: {{product.farm}} </h2>

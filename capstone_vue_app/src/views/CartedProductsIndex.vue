@@ -7,13 +7,11 @@
         </div>
         <div class="carted_products">
             <h1>{{ message }}</h1>
-            <h4>
-                <hr>
-                <br>
-                <br>
-                <h1><button v-on:click="makeOrder()">Order!</button>
-                    </button></h1>
-            </h4>
+            <hr>
+            <br>
+            <br>
+            <h1 style="font-size:155px;"><button v-on:click="makeOrder()">Order!</button>
+                </button></h1>
             <h5></h5>
             <br><br><br>
             <!-- <div v-for="product in Products">
