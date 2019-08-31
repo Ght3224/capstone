@@ -22,8 +22,8 @@ class Api::OrdersController < ApplicationController
     # @carted_products.each do |carted_product|
     #   total += carted_product.quantity *carted_product.product.price
     # end 
-     prices = @carted_products.map{|carted_product|carted_product.product.price}
-     quantities = @carted_products.map{|carted_product| carted_product.quantity}
+   prices = @carted_products.map { |carted_product|carted_product.product.price }
+   quantities = @carted_products.map { |carted_product| carted_product.quantity }
 
     i,total = 0, [] 
     while i < prices.length 
@@ -31,14 +31,19 @@ class Api::OrdersController < ApplicationController
       i+=1
     end 
 
-     total = total.reduce(:+)
-
+    total = total.reduce(:+)
 
     @order = Order.new(
-         price: total 
-         # user_id: current_user.id
-         # quantity: quantities
-      )
+      price: total,
+      name: params[:name],
+      address: params[:address],
+      city: params[:city],
+      state: params[:state],
+      zip: params[:zip],
+      phone: params[:phone] 
+       # user_id: current_user.id
+       # quantity: quantities
+    )
 
      @order.save
 

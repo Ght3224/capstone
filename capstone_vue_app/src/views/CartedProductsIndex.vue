@@ -8,11 +8,33 @@
         <div class="carted_products">
             <h1>{{ message }}</h1>
             <hr>
-            <br>
-            <br>
-            <h1 style="font-size:155px;"><button v-on:click="makeOrder()">Order!</button>
-                </button></h1>
-            <h5></h5>
+            <div class="input-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" v-model="name" placeholder="Name">
+            </div>
+            <div class="input-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" v-model="address" placeholder="1234 Main St">
+            </div>
+            <div class="row">
+                <div class="input-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" v-model="city">
+                </div>
+                <div class="input-group col-md-4">
+                    <label for="inputState">State</label>
+                    <input type="text" class="form-control" id="inputState" v-model="state">
+                </div>
+                <div class="input-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" v-model="zip">
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="inputPhone">Phone</label>
+                <input type="tel" class="form-control" id="inputPhone" placeholder="(555) 555-5555" v-model="phone">
+            </div>
+            <button type="submit" class="btn btn-primary" v-on:click="makeOrder()">Place Order</button>
             <br><br><br>
             <!-- <div v-for="product in Products">
                <!- <div v-if="currentProduct === product"> -->
@@ -62,7 +84,13 @@ export default {
             message: "This is the cart",
             cartedProducts: [],
             currentProduct: {},
-            Products: []
+            Products: [],
+            name: '',
+            address: '',
+            city: '',
+            state: '',
+            zip: '',
+            phone: ''
         };
     },
     created: function() {
@@ -79,7 +107,9 @@ export default {
             this.$router.push(`/carted_products`)
         },
         makeOrder: function() {
-            axios.post('/api/orders').then(response => {
+            const { name, address, city, state, zip, phone } = this;
+            let orderParams = { name, address, city, state, zip, phone };
+            axios.post('/api/orders', orderParams).then(response => {
                 this.$router.push(`/orders/${response.data.id}`);
             })
         }
