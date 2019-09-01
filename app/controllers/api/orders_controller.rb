@@ -40,12 +40,12 @@ class Api::OrdersController < ApplicationController
       city: params[:city],
       state: params[:state],
       zip: params[:zip],
-      phone: params[:phone] 
-       # user_id: current_user.id
-       # quantity: quantities
+      phone: params[:phone], 
+      user_id: 1
     )
 
-     @order.save
+
+     @order.save!
 
 
     @carted_products.update(status: 'purchased', order_id: @order.id)
