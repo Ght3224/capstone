@@ -1,7 +1,9 @@
 @order.each do |order| 
   {
     id: order.id, 
+    name: order.name, 
     price: order.price
     
   }
 end 
+

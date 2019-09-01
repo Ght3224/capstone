@@ -34,7 +34,7 @@
                 <label for="inputPhone">Phone</label>
                 <input type="tel" class="form-control" id="inputPhone" placeholder="(555) 555-5555" v-model="phone">
             </div>
-            <button type="submit" class="btn btn-primary" v-on:click="makeOrder()">Place Order</button>
+            <h1><button type="submit" class="btn btn-primary" v-on:click="makeOrder()">Place Order</button></h1>
             <br><br><br>
             <!-- <div v-for="product in Products">
                <!- <div v-if="currentProduct === product"> -->
